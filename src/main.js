@@ -30,8 +30,8 @@ const createSession = async (browser, page) => {
 
 
 
-const createAdapter = async (cookies) => {
-  const browser = await puppeteer.launch({ headless: false });
+const createAdapter = async (cookies, options) => {
+  const browser = await puppeteer.launch(options);
   const cookie = Object.entries(cookies).map(([key, value]) => ({
     name: key,
     value: value,

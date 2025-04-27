@@ -1,4 +1,4 @@
-import { Browser, Page } from "puppeteer";
+import { Browser, LaunchOptions, Page } from "puppeteer";
 
 interface Cookie {
   [k: string]: string;
@@ -10,4 +10,4 @@ interface Session {
 }
 
 export function createSession(browser: Browser, page?: Page): Promise<Session>;
-export function createAdapter(cookies: Cookie): Promise<(requestContext: any) => Promise<any>>;
+export function createAdapter(cookies: Cookie, options: LaunchOptions): Promise<(requestContext: any) => Promise<any>>;
