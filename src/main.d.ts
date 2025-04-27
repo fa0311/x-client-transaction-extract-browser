@@ -1,0 +1,13 @@
+import { Browser, Page } from "puppeteer";
+
+interface Cookie {
+  [k: string]: string;
+}
+
+interface Session {
+  close: () => Promise<void>;
+  res: (method: string, url: string) => Promise<string>;
+}
+
+export function createSession(browser: Browser, page?: Page): Promise<Session>;
+export function createAdapter(cookies: Cookie): Promise<(requestContext: any) => Promise<any>>;

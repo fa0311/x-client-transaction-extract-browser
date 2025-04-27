@@ -1,0 +1,10 @@
+{
+  "name": "x-client-transaction-extract-browser",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "src/main.js",
+  "dependencies": {
+    "node-html-parser": "^7.0.1",
+    "puppeteer": "^24.7.2"
+  }
+}
