@@ -17,3 +17,4 @@ export function decodeTransactionId(transactionId: string): {
   hashBytes: Buffer;
   additional: number;
 };
+export function generateTransactionId(method: string, path: string, key: string): Promise<string>;

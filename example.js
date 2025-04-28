@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const puppeteer = require("puppeteer");
-const { createSession } = require("./src/main");
+const { createSession, decodeTransactionId } = require("./src/main");
 
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
@@ -12,7 +12,10 @@ const { createSession } = require("./src/main");
       domain: cookie.domain,
     }))
   );
-  const a = await createSession(browser);
-  console.log(await a.res("GET", "/i/api/graphql/_8aYOgEDz35BrBcBal1-_w/TweetDetail"));
+  const session = await createSession(browser);
+  const id = await session.res("GET", "/i/api/graphql/_8aYOgEDz35BrBcBal1-_w/TweetDetail");
+  console.log(id);
+  console.log(decodeTransactionId(id));
+
   await a.close();
 })();
