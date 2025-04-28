@@ -11,3 +11,9 @@ interface Session {
 
 export function createSession(browser: Browser, page?: Page): Promise<Session>;
 export function createAdapter(cookies: Cookie, options: LaunchOptions): Promise<(requestContext: any) => Promise<any>>;
+export function decodeTransactionId(transactionId: string): {
+  keyBytes: Buffer;
+  time: Date;
+  hashBytes: Buffer;
+  additional: number;
+};
