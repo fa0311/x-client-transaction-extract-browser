@@ -17,5 +17,5 @@ const { createSession, decodeTransactionId } = require("./src/main");
   console.log(id);
   console.log(decodeTransactionId(id));
 
-  await a.close();
+  await session.close();
 })();
