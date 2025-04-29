@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "type": "commonjs",
   "main": "src/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "node-html-parser": "^7.0.1",
     "puppeteer": "^24.7.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
   }
 }

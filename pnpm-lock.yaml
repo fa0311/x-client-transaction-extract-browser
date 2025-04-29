@@ -10,7 +10,12 @@ dependencies:
     version: 7.0.1
   puppeteer:
     specifier: ^24.7.2
-    version: 24.7.2
+    version: 24.7.2(typescript@5.8.3)
+
+devDependencies:
+  typescript:
+    specifier: ^5.5.4
+    version: 5.8.3
 
 packages:
 
@@ -199,7 +204,7 @@ packages:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     dev: false
 
-  /cosmiconfig@9.0.0:
+  /cosmiconfig@9.0.0(typescript@5.8.3):
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -212,6 +217,7 @@ packages:
       import-fresh: 3.3.1
       js-yaml: 4.1.0
       parse-json: 5.2.0
+      typescript: 5.8.3
     dev: false
 
   /css-select@5.1.0:
@@ -600,7 +606,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /puppeteer@24.7.2:
+  /puppeteer@24.7.2(typescript@5.8.3):
     resolution: {integrity: sha512-ifYqoY6wGs0yZeFuFPn8BE9FhuveXkarF+eO18I2e/axdoCh4Qh1AE+qXdJBhdaeoPt6eRNTY4Dih29Jbq8wow==}
     engines: {node: '>=18'}
     hasBin: true
@@ -608,7 +614,7 @@ packages:
     dependencies:
       '@puppeteer/browsers': 2.10.2
       chromium-bidi: 4.1.1(devtools-protocol@0.0.1425554)
-      cosmiconfig: 9.0.0
+      cosmiconfig: 9.0.0(typescript@5.8.3)
       devtools-protocol: 0.0.1425554
       puppeteer-core: 24.7.2
       typed-query-selector: 2.12.0
@@ -729,6 +735,11 @@ packages:
   /typed-query-selector@2.12.0:
     resolution: {integrity: sha512-SbklCd1F0EiZOyPiW192rrHZzZ5sBijB6xM+cpmrwDqObvdtunOHHIk9fCGsoK5JVIYXoyEp4iEdE3upFH3PAg==}
     dev: false
+
+  /typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   /undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}

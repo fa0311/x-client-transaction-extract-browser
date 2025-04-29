@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * @param {number[]} timeBytes
+ * @returns {Date}
+ */
 const decodeTimeFromBytes = (timeBytes) => {
   const timeValue = timeBytes.reverse().reduce((acc, value) => (acc << 8) | value, 0);
   const baseTime = 1682924400;
@@ -6,6 +12,10 @@ const decodeTimeFromBytes = (timeBytes) => {
   return date;
 };
 
+/**
+ * @param {string} transactionId
+ * @returns {{keyBytes: number[], time: Date, hashBytes: number[], additional: number}}
+ */
 const decodeTransactionId = (transactionId) => {
   const base = transactionId + "=".repeat((4 - (transactionId.length % 4)) % 4);
   const decode = Buffer.from(base, "base64");

@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * @param {string} data
+ * @returns {Promise<number[]>}
+ */
 const encodeSha256 = async (data) => {
   const encoder = new TextEncoder();
   const dataBuffer = encoder.encode(data);
@@ -6,15 +12,30 @@ const encodeSha256 = async (data) => {
   return hashBytes;
 };
 
+/**
+ * @param {Uint8Array<ArrayBuffer>} data
+ * @returns {string}
+ */
 const encodeBase64 = (data) => {
   const b64 = Buffer.from(data).toString("base64");
   return b64.replace(/=/g, "");
 };
 
+/**
+ * @param {string} data
+ * @returns {number[]}
+ */
 const decodeBase64 = (data) => {
   return Array.from(Buffer.from(data, "base64"));
 };
 
+/**
+ * @param {string} method
+ * @param {string} path
+ * @param {string} key
+ * @param {string} animationKey
+ * @returns {Promise<string>}
+ */
 const generateTransactionId = async (method, path, key, animationKey) => {
   const DEFAULT_KEYWORD = "obfiowerehiring";
   const ADDITIONAL_RANDOM_NUMBER = 3;
