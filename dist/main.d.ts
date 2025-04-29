@@ -1,11 +1,13 @@
 /**
  * @param {import("puppeteer").Browser} browser
  * @param {import("puppeteer").Page | undefined} page
- * @returns {Promise<{close: () => Promise<void>, res: (method: string, url: string) => Promise<any>}>}
+ * @returns {Promise<{close: () => Promise<void>, res: (method: string, url: string) => Promise<any>, key: (method: string, url: string) => Promise<string>, verification: string}>}
  */
 export function createSession(browser: import("puppeteer").Browser, page: import("puppeteer").Page | undefined): Promise<{
     close: () => Promise<void>;
     res: (method: string, url: string) => Promise<any>;
+    key: (method: string, url: string) => Promise<string>;
+    verification: string;
 }>;
 /**
  * @param {import("puppeteer").Browser} browser

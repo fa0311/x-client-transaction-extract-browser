@@ -61,17 +61,21 @@ const getKeyEvaluate = async (method, url) => {
 /**
  * @param {import("puppeteer").Browser} browser
  * @param {import("puppeteer").Page | undefined} page
- * @returns {Promise<{close: () => Promise<void>, res: (method: string, url: string) => Promise<any>}>}
+ * @returns {Promise<{close: () => Promise<void>, res: (method: string, url: string) => Promise<any>, key: (method: string, url: string) => Promise<string>, verification: string}>}
  */
 const createSession = async (browser, page) => {
   const newPage = page ?? (await browser.newPage());
   const indexPage = await newPage.goto("https://x.com/home");
   const indexRoot = parse(await indexPage.text());
+  const verification = indexRoot.querySelector("[name^=tw]")?.getAttribute("content");
   const indexSvg = indexRoot.querySelectorAll("svg").map((e) => e.outerHTML);
   await newPage.evaluate(evaluateSetup, indexSvg.join(""), undefined);
+  await newPage.evaluate(hookEvaluateSetup);
   return {
     close: async () => await browser.close(),
     res: async (method, url) => await newPage.evaluate(evaluate, method, url),
+    key: async (method, url) => await newPage.evaluate(getKeyEvaluate, method, url),
+    verification: verification,
   };
 };
 

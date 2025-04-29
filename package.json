@@ -1,16 +1,17 @@
 {
-  "name": "x-client-transaction-extract-browser",
-  "version": "1.0.0",
+  "name": "x-client-transaction-id-extract-browser",
+  "version": "0.0.1",
   "type": "commonjs",
   "main": "src/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
     "build": "tsc"
   },
+  "license": "MIT",
   "dependencies": {
     "node-html-parser": "^7.0.1",
     "puppeteer": "^24.7.2",
-    "x-client-transaction-id-generater": "0.0.4"
+    "x-client-transaction-id-generater": "^0.0.5"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
