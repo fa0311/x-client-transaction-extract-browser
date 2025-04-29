@@ -12,8 +12,8 @@ dependencies:
     specifier: ^24.7.2
     version: 24.7.2(typescript@5.8.3)
   x-client-transaction-id-generater:
-    specifier: ^0.0.5
-    version: 0.0.5
+    specifier: ^0.0.6
+    version: 0.0.6
 
 devDependencies:
   typescript:
@@ -776,8 +776,8 @@ packages:
         optional: true
     dev: false
 
-  /x-client-transaction-id-generater@0.0.5:
-    resolution: {integrity: sha512-FAk7KWRfSh5c932JUqqzebyJiDDYFlWPqhK+5Q3+T+24TwtEcdhc7aM+uhrl4bMpGx+ACzjfQwz7RnbXedYIfA==}
+  /x-client-transaction-id-generater@0.0.6:
+    resolution: {integrity: sha512-wcGygg2fwgVOBSfK3d8zh99x+TbsPESExfOeiy34yddpwJ44oHic9dEHF0t2dz21bNS4klf5x0xQ7hhs3N3DFw==}
     dependencies:
       node-html-parser: 7.0.1
     dev: false

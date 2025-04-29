@@ -2,7 +2,6 @@
 
 const { parse } = require("node-html-parser");
 const puppeteer = require("puppeteer");
-const { decodeTransactionId, generateTransactionId } = require("x-client-transaction-id-generater");
 
 /**
  * @param {string} indexSvg
@@ -125,4 +124,4 @@ const createAdapter = async (cookies, options) => {
   };
 };
 
-module.exports = { createSession, createSessionOverride, createAdapter, decodeTransactionId, generateTransactionId };
+module.exports = { createSession, createSessionOverride, createAdapter };
