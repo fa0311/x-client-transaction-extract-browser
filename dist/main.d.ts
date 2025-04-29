@@ -27,6 +27,6 @@ export function createAdapter(cookies: Record<string, string>, options: import("
     context: any;
     init: any;
 }) => Promise<any>>;
-import { decodeTransactionId } from "./decode";
-import { generateTransactionId } from "./encode";
+import { decodeTransactionId } from "x-client-transaction-id-generater";
+import { generateTransactionId } from "x-client-transaction-id-generater";
 export { decodeTransactionId, generateTransactionId };
