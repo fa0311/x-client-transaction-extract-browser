@@ -11,10 +11,13 @@ dependencies:
   puppeteer:
     specifier: ^24.7.2
     version: 24.7.2(typescript@5.8.3)
+  x-client-transaction-id-generater:
+    specifier: 0.0.4
+    version: 0.0.4
 
 devDependencies:
   typescript:
-    specifier: ^5.5.4
+    specifier: ^5.8.3
     version: 5.8.3
 
 packages:
@@ -771,6 +774,12 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+    dev: false
+
+  /x-client-transaction-id-generater@0.0.4:
+    resolution: {integrity: sha512-gPXYSvuSlTxSynYxPPZujQPK89twAqn5QShXo2vQcsKWnxPKpah1DnFQSM3QYF67S6EhpoXfk25bUoxelZscYg==}
+    dependencies:
+      node-html-parser: 7.0.1
     dev: false
 
   /y18n@5.0.8:

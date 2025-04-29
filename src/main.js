@@ -2,8 +2,7 @@
 
 const { parse } = require("node-html-parser");
 const puppeteer = require("puppeteer");
-const { decodeTransactionId } = require("./decode");
-const { generateTransactionId } = require("./encode");
+const { decodeTransactionId, generateTransactionId } = require("x-client-transaction-id-generater");
 
 /**
  * @param {string} indexSvg

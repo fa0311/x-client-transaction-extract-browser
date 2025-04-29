@@ -9,9 +9,10 @@
   },
   "dependencies": {
     "node-html-parser": "^7.0.1",
-    "puppeteer": "^24.7.2"
+    "puppeteer": "^24.7.2",
+    "x-client-transaction-id-generater": "0.0.4"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "^5.8.3"
   }
 }
